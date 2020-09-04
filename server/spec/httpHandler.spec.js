@@ -22,7 +22,14 @@ describe('server responses', () => {
   });
 
   it('should respond to a GET request for a swim command', (done) => {
-    // write your test here
+    let validMessages = ['left', 'right', 'up', 'down'];
+
+    let {req, res} = server.mock('/', 'GET');
+
+    httpHandler.router(req, res, () => {console.log('made it through router. Response data:', res._data)});
+    let validIndex = validMessages.indexOf(res._data.toString());
+    expect(validIndex).to.be.greater.than(-1);
+
     done();
   });
 

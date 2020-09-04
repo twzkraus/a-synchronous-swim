@@ -4,6 +4,17 @@
 
   //
   // TODO: build the swim command fetcher here
+  const getRandomSwimDirection = () => {
+    $.ajax({
+      type: 'GET',
+      url: serverUrl,
+      success: (response) => {
+        // reload the page
+        SwimTeam.move(response);
+      }
+    });
+  };
+  setInterval(getRandomSwimDirection, 2000);
   //
 
   /////////////////////////////////////////////////////////////////////
@@ -17,7 +28,7 @@
     $.ajax({
       type: 'POST',
       data: formData,
-      url: 'FILL_ME_IN',
+      url: serverUrl,
       cache: false,
       contentType: false,
       processData: false,
