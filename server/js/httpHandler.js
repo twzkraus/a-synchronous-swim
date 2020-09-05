@@ -19,8 +19,14 @@ module.exports.initialize = (queue) => {
 // This function responds to requests at http://127.0.0.1/
 module.exports.router = (req, res, next = ()=>{}) => {
   console.log('Serving request type ' + req.method + ' for url ' + req.url);
-  res.writeHead(200, headers);
-  res.write(messageQueue.dequeue());
-  res.end();
+  if (req.method === 'GET') {
+    res.writeHead(200, headers);
+    res.write(messageQueue.dequeue());
+    res.end();
+  } else if (req.method === 'OPTIONS') {
+    res.writeHead(200, headers);
+    res.write();
+    res.end();
+  }
   next(); // invoke next() at the end of a request to help with testing!
 };
