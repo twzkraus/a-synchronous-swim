@@ -26,8 +26,8 @@ describe('server responses', () => {
 
     let {req, res} = server.mock('/', 'GET');
 
-    httpHandler.router(req, res, () => {console.log('-------------------->',res);});
-    let validIndex = validMessages.indexOf(res._data);
+    httpHandler.router(req, res, () => {console.log('-------------------->', JSON.stringify(res.toString()))});
+    let validIndex = validMessages.indexOf(res._data.toString());
     expect(validIndex).to.be.greaterThan(-1);
 
     done();
