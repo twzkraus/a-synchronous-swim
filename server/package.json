@@ -11,8 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "keypress": "^0.2.1",
+<<<<<<< HEAD
+=======
+    "mocha": "^8.1.3",
+>>>>>>> bedce2ced99f79432a9c17c9e78dabd87dea4c4c
     "nodemon": "^2.0.4",
     "parse-multipart": "^1.0.4",
+    "sinon": "^9.0.3",
     "underscore": "^1.9.1"
   },
   "devDependencies": {
