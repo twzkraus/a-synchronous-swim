@@ -8,7 +8,7 @@ keypressHandler.initialize(message => {
 });
 
 const httpHandler = require('./js/httpHandler');
-httpHandler.initialize(['left','right','up','down','left','right','up','down','left','right','up','down']);
+httpHandler.initialize(['left','right','up','down']);
 
 
 const http = require('http');
