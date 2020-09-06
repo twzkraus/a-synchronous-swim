@@ -1,4 +1,4 @@
-const messages = []; // the storage unit for messages
+const messages = ['left', 'right', 'left', 'right', 'left', 'right', 'left', 'right', 'left', 'right']; // the storage unit for messages
 
 module.exports.enqueue = (message) => {
   console.log(`Enqueing message: ${message}`);

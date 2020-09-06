@@ -13,6 +13,7 @@ h3 {
 }
 .background {
   background-image: url(http://127.0.0.1:3000/background.jpg);
+  background-size: cover;
 }
 .team {
   position: absolute;
